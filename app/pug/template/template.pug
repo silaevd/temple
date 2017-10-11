@@ -1,0 +1,29 @@
+doctype html
+html(lang='ru', prefix='og: http://ogp.me/ns#\
+profile: http://ogp.me/ns/profile#')
+  include ../includes/_head.pug
+  
+  body
+    #preloader
+      #status
+    .wrapper
+      include ../includes/_header.pug
+      
+      include ../includes/_slider.pug
+                
+      include ../includes/_contacts.pug
+      
+      .container
+        .content
+          main#main.main
+            block main
+              
+          aside#events.events
+            include ../includes/_events.pug
+       
+      .container
+        include ../includes/_footer.pug
+      
+      
+      script(src='./js/libs.min.js')
+      script(src='./js/common.min.js')

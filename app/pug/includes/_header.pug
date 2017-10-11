@@ -1,0 +1,21 @@
+header#header.header   
+    .container
+      nav.nav
+        .logo
+          .logo__pic
+            img(src="../../img/logo.png" alt="logo")
+          .logo__text
+            p Церковь "Краеугольный камень" <br>
+              span г. Калининград
+        .menu
+          .menu__links
+            a.menu__link(href="index.html") Главная
+            a.menu__link(href="about.html") О нас
+            a.menu__link(href="#") Служение
+            a.menu__link.contactsLink(href="#") Контакты
+          a.menu__trigger
+            i(class="fa fa-bars" aria-hidden="true")
+        .search
+          input.search__input
+          button(type='submit' class='search__button')
+            i(class="fa fa-search" aria-hidden="true")
