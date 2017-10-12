@@ -3,24 +3,29 @@
   // background: url('../img/contacts_bg.png');
   background: rgba(0, 0, 0, 0.91);
   position: fixed;
+  top: 0;
   left: 0;
-  bottom: 0;
   z-index: 1000;
   height: 100%;
-  width: auto;
+  max-width: 400px;
   border-right: solid 2px $white;
-  margin-left: -370px;
+  margin-left: -420px;
   padding: 15px;
   transition: all 0.5s;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  @include max-screen($break_sm) {
+    overflow: auto;
+    max-width: none;
+    width: 100%;
+  }
   &_active {
-    margin-left: 0px;
+    margin-left: 0;
   }
   &__title {
     text-align: center;
-    margin: 30px 0;
+    margin: 20px 0;
   }
   &__close {
     font-size: 1.3em;
@@ -34,9 +39,17 @@
   }
   .divider {
     width: 80%;
+    margin-bottom: 20px;
+    @include max-screen($break_sm) {
+      width: 90%;
+    }
   }
   &__items {
     flex: 1;
+    padding: 0 40px;
+    @include max-screen($break_sm) {
+      padding: 0 10px;
+    }
   }
   &__item {
     display: block;
@@ -50,6 +63,7 @@
     figure {
       display: flex;
       align-items: center;
+      margin: 0 auto;
       figcaption {
         letter-spacing: 2px;
         line-height: 1.2;
@@ -69,8 +83,11 @@
   }
   &__position {
     font-size: 14px;
+    @include max-screen($break_sm) {
+      font-size: 12px;
+    }
   }
-  &__phone {
+  &__phone, &__vk {
     margin-top: 5px;
     font-size: 14px;
     transition: 300ms;
@@ -82,9 +99,6 @@
     text-align: center;
     margin-bottom: 30px;
     h2 {
-      margin-bottom: 15px;
-    }
-    p {
       margin-bottom: 15px;
     }
     ymaps {

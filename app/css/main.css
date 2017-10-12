@@ -2548,8 +2548,6 @@
   width: 100%;
   max-height: 100px;
   z-index: 99; }
-  .header_mini .nav {
-    line-height: 1; }
   .header_mini .logo__pic img {
     -webkit-transition: 500ms;
     transition: 500ms;
@@ -3360,13 +3358,13 @@
   color: #FFFFFF;
   background: rgba(0, 0, 0, 0.91);
   position: fixed;
+  top: 0;
   left: 0;
-  bottom: 0;
   z-index: 1000;
   height: 100%;
-  width: auto;
+  max-width: 400px;
   border-right: solid 2px #FFFFFF;
-  margin-left: -370px;
+  margin-left: -420px;
   padding: 15px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -3382,11 +3380,16 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
+  @media only screen and (max-width: 768px) {
+    .contacts {
+      overflow: auto;
+      max-width: none;
+      width: 100%; } }
   .contacts_active {
-    margin-left: 0px; }
+    margin-left: 0; }
   .contacts__title {
     text-align: center;
-    margin: 30px 0; }
+    margin: 20px 0; }
   .contacts__close {
     font-size: 1.3em;
     color: #FFFFFF;
@@ -3397,12 +3400,20 @@
       color: #DAA520;
       cursor: pointer; }
   .contacts .divider {
-    width: 80%; }
+    width: 80%;
+    margin-bottom: 20px; }
+    @media only screen and (max-width: 768px) {
+      .contacts .divider {
+        width: 90%; } }
   .contacts__items {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
-            flex: 1; }
+            flex: 1;
+    padding: 0 40px; }
+    @media only screen and (max-width: 768px) {
+      .contacts__items {
+        padding: 0 10px; } }
   .contacts__item {
     display: block;
     margin-bottom: 30px; }
@@ -3418,7 +3429,8 @@
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      margin: 0 auto; }
       .contacts__item figure figcaption {
         letter-spacing: 2px;
         line-height: 1.2;
@@ -3436,19 +3448,20 @@
     transition: 300ms; }
   .contacts__position {
     font-size: 14px; }
-  .contacts__phone {
+    @media only screen and (max-width: 768px) {
+      .contacts__position {
+        font-size: 12px; } }
+  .contacts__phone, .contacts__vk {
     margin-top: 5px;
     font-size: 14px;
     -webkit-transition: 300ms;
     transition: 300ms; }
-    .contacts__phone i {
+    .contacts__phone i, .contacts__vk i {
       margin-right: 10px; }
   .contacts__adress {
     text-align: center;
     margin-bottom: 30px; }
     .contacts__adress h2 {
-      margin-bottom: 15px; }
-    .contacts__adress p {
       margin-bottom: 15px; }
     .contacts__adress ymaps {
       margin: 0 auto; }
