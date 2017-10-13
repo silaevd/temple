@@ -3276,6 +3276,49 @@
     .glorification__vid {
       max-width: 100%; } }
 
+.ministration__content {
+  background: #FFFFFF;
+  padding: 45px 30px 30px 30px;
+  -webkit-box-shadow: 0 0 2px 1px #111111;
+          box-shadow: 0 0 2px 1px #111111;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.ministration .divider {
+  width: 15%; }
+  @media only screen and (max-width: 1024px) {
+    .ministration .divider {
+      width: 25%; } }
+
+.ministration__item {
+  text-align: center;
+  margin: 20px 0; }
+  .ministration__item h2 {
+    margin-bottom: 10px; }
+
+.ministration__pic {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+  @media only screen and (max-width: 480px) {
+    .ministration__pic {
+      max-width: 100%; } }
+
+.ministration__vid {
+  max-width: 60%;
+  height: auto;
+  margin: 30px 0; }
+  @media only screen and (max-width: 480px) {
+    .ministration__vid {
+      max-width: 100%; } }
+
 .worship__content {
   background: #FFFFFF;
   padding: 45px 30px 30px 30px;
@@ -3380,11 +3423,12 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 480px) {
     .contacts {
       overflow: auto;
       max-width: none;
-      width: 100%; } }
+      width: 100%;
+      border: none; } }
   .contacts_active {
     margin-left: 0; }
   .contacts__title {
@@ -3402,7 +3446,7 @@
   .contacts .divider {
     width: 80%;
     margin-bottom: 20px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 480px) {
       .contacts .divider {
         width: 90%; } }
   .contacts__items {
@@ -3410,8 +3454,12 @@
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0 40px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 480px) {
       .contacts__items {
         padding: 0 10px; } }
   .contacts__item {

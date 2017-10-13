@@ -104,6 +104,9 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
   var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
   .pipe(gulp.dest('dist/js'))
 
+  var buildVideo = gulp.src('app/video/**/*') // Переносим скрипты в продакшен
+  .pipe(gulp.dest('dist/video'))
+
   var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
   .pipe(gulp.dest('dist'));
 
